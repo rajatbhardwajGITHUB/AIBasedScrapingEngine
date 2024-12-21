@@ -22,7 +22,7 @@
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/yourusername/my_fastapi_project.git
+    git clone https://github.com/rajatbhardwajGITHUB/my_fastapi_project.git
     cd my_fastapi_project
     ```
 
