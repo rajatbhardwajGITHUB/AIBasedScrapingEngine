@@ -2,6 +2,7 @@ from fastapi import FastAPI, Depends, HTTPException
 from api.deps import verify_authorization
 from services.ai_agent_services import web_scraper
 from models import ExtractedData, ResponseModel
+from mangum import Mangum
 app = FastAPI()
 
 @app.post("/{url}", response_model=ResponseModel)
@@ -30,3 +31,5 @@ async def read_root(authorized: None = Depends(verify_authorization), url: str =
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error occurred: {str(e)}")
 
+from mangum import Mangum
+handler = Mangum(app)
