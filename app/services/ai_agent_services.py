@@ -62,8 +62,3 @@ def web_scraper(url):
         return {"error": str(e)}
 
 
-# Test the function
-if __name__ == "__main__":
-    url = "example.com"  # Replace with your target URL
-    result = web_scraper(url)
-    print("\nResult:", result)
